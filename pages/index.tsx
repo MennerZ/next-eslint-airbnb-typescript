@@ -1,7 +1,7 @@
 import React from 'react';
 import type { FC } from 'react';
 import Head from 'next/head';
-import HomeView from 'src/views/home/HomeView';
+import HomeView from '../src/views/home/HomeView';
 
 const Home: FC = () => (
   <div>

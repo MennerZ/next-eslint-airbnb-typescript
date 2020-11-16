@@ -4,6 +4,7 @@ module.exports = {
     browser: true,
     node: true,
     es6: true,
+    jest: true,
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -22,18 +23,9 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:mdx/recommended',
   ],
-  settings: {
-    react: { version: 'detect' },
-    'import/resolver': {
-      node: {
-        paths: ['src'],
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.mdx'],
-      },
-    },
-  },
+
   rules: {
     'no-plusplus': 'off',
-    'import/no-unresolved': 'off',
     'react-hooks/exhaustive-deps': 'off',
     'react/jsx-filename-extension': 'off',
     'react/jsx-props-no-spreading': 'off',
@@ -43,5 +35,29 @@ module.exports = {
     'jsx-a11y/no-static-element-interactions': 'off',
     'jsx-a11y/control-has-associated-label': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      2,
+      {
+        argsIgnorePattern: '^_',
+      },
+    ],
+    'no-console': [
+      2,
+      {
+        allow: ['warn', 'error'],
+      },
+    ],
+  },
+  settings: {
+    react: { version: 'detect' },
+    'import/resolver': {
+      node: {
+        paths: ['src'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.mdx'],
+      },
+      jest: {
+        jestConfigFile: 'jest.tsconfig.json',
+      },
+    },
   },
 };
