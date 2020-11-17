@@ -14,7 +14,6 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    tsconfigRootDir: '.',
   },
   ignorePatterns: [
     'node_modules/*',
@@ -58,10 +57,6 @@ module.exports = {
   settings: {
     react: { version: 'detect' },
     'import/resolver': {
-      // alias: {
-      //   map: [['src', 'src']],
-      //   extensions: ['.js', '.jsx', '.ts', '.tsx', '.mdx'],
-      // },
       node: {
         paths: ['src'],
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.mdx'],
