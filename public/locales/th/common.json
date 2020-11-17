@@ -1,0 +1,11 @@
+{
+    "home":{
+        "header": {
+            "title": "หน้าหลัก"
+        },
+        "content": {
+            "greeting": "สวัสดี"
+        }
+    }
+    
+}

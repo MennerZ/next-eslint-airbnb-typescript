@@ -14,8 +14,15 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
+    tsconfigRootDir: '.',
   },
-  ignorePatterns: ['node_modules/*', '.next/*', '.out/*', '!.prettierrc.js'],
+  ignorePatterns: [
+    'node_modules/*',
+    '.next/*',
+    '.out/*',
+    '!.prettierrc.js',
+    'next.config.js',
+  ],
   extends: [
     'airbnb-typescript',
     'airbnb/hooks',
@@ -51,12 +58,16 @@ module.exports = {
   settings: {
     react: { version: 'detect' },
     'import/resolver': {
+      // alias: {
+      //   map: [['src', 'src']],
+      //   extensions: ['.js', '.jsx', '.ts', '.tsx', '.mdx'],
+      // },
       node: {
         paths: ['src'],
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.mdx'],
       },
       jest: {
-        jestConfigFile: 'jest.tsconfig.json',
+        jestConfigFile: './jest.config.js',
       },
     },
   },
