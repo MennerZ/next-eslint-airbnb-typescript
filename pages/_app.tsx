@@ -1,12 +1,15 @@
 import '../i18n';
-import React, { useEffect } from 'react';
 import '../styles/globals.css';
-import type { AppProps } from 'next/app';
+import React, { useEffect } from 'react';
+import type { AppContext, AppInitialProps, AppProps } from 'next/app';
 import { useTranslation } from 'react-i18next';
 import { useRouter } from 'next/router';
-import { NextPage } from 'next';
+import { NextComponentType } from 'next';
 
-const MyApp: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {
+const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
+  Component,
+  pageProps,
+}: AppProps) => {
   const { i18n } = useTranslation();
   const router = useRouter();
   const { locale } = router;
