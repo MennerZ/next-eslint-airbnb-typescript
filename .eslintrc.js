@@ -31,6 +31,15 @@ module.exports = {
   ],
 
   rules: {
+    'react/jsx-wrap-multilines': {
+      'declaration': 'parens',
+      'assignment': 'parens',
+      'return': 'parens',
+      'arrow': 'parens',
+      'condition': 'ignore',
+      'logical': 'ignore',
+      'prop': 'ignore'
+    },
     'no-plusplus': 'off',
     'react-hooks/exhaustive-deps': 'off',
     'react/jsx-filename-extension': 'off',
